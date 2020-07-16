@@ -26,3 +26,20 @@ class Player:
 class RandomPlayer(Player):
     def move(self):
         return random.choice(moves)
+
+# This player class can be used by a human player
+
+class HumanPlayer(Player):
+    def move(self):
+        # A lower function is called to accomodate both capital and lower
+        # case input from the player
+        move = input ('Rock, Paper, Scissors?\n'
+                      'or "q" to quit. >>>').lower()
+
+        # This checks if your input is included in the list of valid moves
+        if move in moves:
+            return move
+        elif move == 'q':
+            exit()
+        else:
+            return self.move()
