@@ -43,3 +43,19 @@ class HumanPlayer(Player):
             exit()
         else:
             return self.move()
+
+# This player class that returns the move previously played by the opponent
+class ReflectPlayer(Player):
+    # This handles the intial state wher there are no moves played yet.
+    def __init__(self):
+        super().__init__()
+        self.their_move = None
+
+    def learn(self, my_move, thier_move):
+        self.their_move = their_move
+        return self.their_move
+
+    def move(self):
+        if self.their_move is None:
+            return random.choice(moves)
+        return self.their_move
