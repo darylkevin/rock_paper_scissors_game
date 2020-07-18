@@ -59,3 +59,19 @@ class ReflectPlayer(Player):
         if self.their_move is None:
             return random.choice(moves)
         return self.their_move
+
+# This player class cycles through all the possible moves in the list of moves
+class CyclePlayer(Player):
+    def __init__(self):
+        super().__init__()
+        self.counter = 0
+
+# This implements the cycling nature of the moves. The code is simplified to
+# handle future addition of moves in the moves list.
+    def move(self):
+        # Replace '3' with number of items in moves in case more moves are 
+        # added to the list.
+        remainder = self.counter % 3
+        move = moves[remainder]
+        self.counter += 1
+        return move
