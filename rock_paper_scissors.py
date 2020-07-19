@@ -91,3 +91,12 @@ def beats(self, one, two):
         return 2
     elif one == two:
         print('*** TIE ***')
+
+# This sets the condition for winning the game.
+def winner(self, score1, score2):
+    if score1 > score2:
+        print('*** PLAYER ONE WINS THE GAME!!! ***')
+    elif score1 < score2:
+        print('*** PLAYER TWO WINS THE GAME!!! ***')
+    elif score1 == score2:
+        print('*** THE GAME IS A TIE!!! ***')
