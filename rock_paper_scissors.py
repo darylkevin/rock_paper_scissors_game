@@ -75,3 +75,19 @@ class CyclePlayer(Player):
         move = moves[remainder]
         self.counter += 1
         return move
+
+# This function states the rules for winning a round. Additional conditions can
+# be inserted depending on the rules of the game.
+def beats(self, one, two):
+    if ((one == 'rock' and two == 'scissors') or
+            (one == 'scissors' and two == 'paper') or
+            (one == 'paper' and two == 'rock')):
+        print('*** PLAYER ONE WINS ***')
+        return 1
+    elif ((two == 'rock' and one == 'scissors') or
+            (two == 'scissors' and one == 'paper') or
+            (two == 'paper' and one == 'rock')):
+        print('*** PLAYER TWO WINS ***')
+        return 2
+    elif one == two:
+        print('*** TIE ***')
