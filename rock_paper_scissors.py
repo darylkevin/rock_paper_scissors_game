@@ -107,3 +107,14 @@ def opponent():
             CyclePlayer(), HumanPlayer()]
     return random.choice(opponents)
 
+# Option to play the game again
+def play_again():
+    answer = input('Do you want to play again?\n'
+            '(Y)es or (N)o? >>>').lower()
+    if answer == 'y':
+        game = Game(opponent(), opponent())
+        game.play_game()
+    elif answer = 'n':
+        exit()
+    else:
+        play_again()
