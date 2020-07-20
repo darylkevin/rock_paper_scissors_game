@@ -100,3 +100,10 @@ def winner(self, score1, score2):
         print('*** PLAYER TWO WINS THE GAME!!! ***')
     elif score1 == score2:
         print('*** THE GAME IS A TIE!!! ***')
+
+# Randomizes the player matchups
+def opponent():
+    opponents = [Player(), RandomPlayer(), ReflectPlayer(),
+            CyclePlayer(), HumanPlayer()]
+    return random.choice(opponents)
+
