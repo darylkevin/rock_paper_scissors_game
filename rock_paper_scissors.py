@@ -126,3 +126,13 @@ class Game:
         self.p1score = 0
         self.p2score = 0
 
+    def score(self, beat):
+        if beat == 1:
+            self.p1score += 1
+        elif beat == 2:
+            self.p2score += 1
+        print(f'Score\n'
+                f'Player 1: {self.p1score}\n'
+                f'Player 2: {self.p2score}')
+
+
