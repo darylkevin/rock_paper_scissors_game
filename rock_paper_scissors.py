@@ -135,4 +135,15 @@ class Game:
                 f'Player 1: {self.p1score}\n'
                 f'Player 2: {self.p2score}')
 
-
+    def play_round(self):
+        move1 = self.p1.move()
+        move2 = self.p2.move()
+        if move1 or move2 in moves:
+            print(f'Player1 played {move1}.\n'
+                    f'Player2 played {move2}.')
+            self.p1.learn(move1, move2)
+            self.p2.learn(move2, move1)
+            beat = beats(self, move1, move2)
+            self.score(beat)
+        else:
+            self.play_round()
