@@ -114,7 +114,7 @@ def play_again():
     if answer == 'y':
         game = Game(opponent(), opponent())
         game.play_game()
-    elif answer = 'n':
+    elif answer == 'n':
         exit()
     else:
         play_again()
