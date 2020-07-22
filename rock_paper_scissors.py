@@ -147,3 +147,17 @@ class Game:
             self.score(beat)
         else:
             self.play_round()
+
+    def play_game(self):
+        print('Game Start!!!')
+        try:
+            matches = int(input('How many matches do you want to play? '))
+            for match in range (1, matches + 1):
+                print(f'Match {match} --')
+                self.play_round()
+            except ValueError:
+                game.play_game()
+            winner(self, self.p1score, self.p2score)
+            print('Game Over!')
+            time.sleep(3) # Added so the game won't exit immediately
+            play_again()
