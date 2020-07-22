@@ -161,3 +161,7 @@ class Game:
             print('Game Over!')
             time.sleep(3) # Added so the game won't exit immediately
             play_again()
+
+if __name__ == '__main__':
+    game = Game(opponent(), opponent())
+    game.play_game()
