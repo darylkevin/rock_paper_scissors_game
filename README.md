@@ -19,3 +19,25 @@ I used the popular programming languange: Python.
 My main objective is to make a simple rock-paper-scissors game using Python and apply the principles of __Object Oriented Programming__.
 
 As you can see from how the players are programmed, all players inherit the class of the Player object.
+
+## Can I try out your game?
+Yes! Please try it out!
+
+## Okay. How can I play?
+First you need to `clone` the project:
+```
+git clone https://github.com/darylkevin/rock_paper_scissors_game
+```
+Then you need to open up your terminal (*NIX based OS) and `cd` into the cloned directory:
+```
+cd rock_paper_scissors_game
+```
+Run the .py file using the following command:
+```
+python3 rock_paper_scissors.py
+```
+
+## Is this game also licensed?
+Yep. This program is licensed under GPL v2 as of the time of this writing.
+
+
