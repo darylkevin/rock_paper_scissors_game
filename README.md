@@ -12,3 +12,10 @@ The game starts by matching 2 random players selected from a list of players. Ea
 * A player that 'learns' what the previous player has thrown and repeats it on the next round.
 * A player that cycles through the list of moves.
 
+## What language did you use in making this game?
+I used the popular programming languange: Python.
+
+## What have you demonstrated in making this game?
+My main objective is to make a simple rock-paper-scissors game using Python and apply the principles of __Object Oriented Programming__.
+
+As you can see from how the players are programmed, all players inherit the class of the Player object.
